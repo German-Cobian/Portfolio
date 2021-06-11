@@ -1,0 +1,296 @@
+<?php
+
+$errors = ”;
+
+$myemail = ‘germancobian@hotmail.com’;//<—–Put Your email address here. if(empty($_POST[‘name’]) ||
+
+empty($_POST[’email’]) ||
+
+empty($_POST[‘message’]))
+
+{
+
+$errors .= “\n Error: all fields are required”;
+
+}
+
+$name = $_POST[‘name’];
+
+$email_address = $_POST[’email’];
+
+$message = $_POST[‘message’];
+
+if (!preg_match(
+
+“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address))
+
+{
+
+$errors .= “\n Error: Invalid email address”;
+
+}
+
+if( empty($errors))
+
+{
+
+$to = $myemail;
+
+$email_subject = “Contact form submission: $name”;
+
+$email_body = “You have received a new message. “.
+
+” Here are the details:\n Name: $name \n “.
+
+“Email: $email_address\n Message \n $message”;
+
+$headers = “From: $myemail\n”;
+
+$headers .= “Reply-To: $email_address”;
+
+mail($to,$email_subject,$email_body,$headers);
+
+//redirect to the ‘thank you’ page
+
+header(‘Location: contact-form-thank-you.html’);
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Portfolio</title>
+  </head>
+    
+  <body class="ml-2">
+
+    <nav class="navbar border-bottom bg-secondary">
+      <div class="nav-item white-text pl-5">German Cobian</div>
+        <div class="d-flex flex-row">
+          <a class="nav-item d-none d-md-block white-text pr-5" href="#Portfolio">Portfolio</a>
+          <a class="nav-item d-none d-md-block white-text pr-5" href="#About">About</a>
+          <a class="nav-item d-none d-md-block white-text pr-5" href="#Contact">Contact</a> 
+          <div class="dropdown d-md-none pr-5">
+            <button class="dropbtn">
+              <img src="assets/menu.png" height= 20 width= 20 alt="menu icon"/>
+            </button>
+            <div class="dropdown-content">
+              <a class="" href="#Portfolio">Portfolio</a>
+              <a class="" href="#About">About</a>
+              <a class="" href="#Contact">Contact</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="backgrnd1 black py-5">
+      <h1 class="orange-text pl-5">Welcome</h1>
+      <h2 class="orange-text pl-5 mb-5">This is German Cobian's Portfolio</h2>
+      <h3 class="white-text pl-5">Full Stack Web Developer</h3>
+      <p class="col-10 col-md-6 white-text pl-5">Knowledgeable and experienced in Ruby, Rails, Javascript, React and Redux.</p>
+    </div>
+
+    <div class="d-flex flex-row justify-content-around py-3 border-bottom">
+      <a href="https://www.linkedin.com/in/german-cobian/"><img alt="" class="" src="assets/linkedin.png" height= 30 width= 30></i></a>
+      <a href="https://github.com/German-Cobian"><img alt="" class="" src="assets/github.png" height= 30 width= 30></i></a>
+      <a href="https://twitter.com/GermanCobian3"><img alt="" class="" src="assets/twitter.png" height= 30 width= 30></i></a>
+    </div>
+    
+    <section id="Portfolio" class="my-5">
+      
+      <h2 class="ml-3 my-5">Showcased Works</h2>
+      
+      <div class="row">
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project1 mt-3">
+            <h5 class="px-4 pt-5 red-text">Tic-Tac-Toe</h5>
+            <small><p class="px-4 yellow-text">An implementation of the popular tic-tac-toe game in the Ruby programming language.</p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Ruby</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/Tic-Tac-Toe" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project2 mt-3">
+            <h5 class="px-4 pt-5 red-text">Web-Development-Course</h5>
+            <small><p class="px-4 yellow-text">A website to promote, inform and register for a web-development course </p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Html</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Css</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Bootstrap</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/Web-Development-Course" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project3 mt-3">
+            <h5 class="px-4 pt-5 red-text">Members-only</h5>
+            <small><p class="px-4 yellow-text">Authentication systems are implemented so users can only access specific areas of a site they are authorized to do so.</p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Rails</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Ruby</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Bootstrap</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/Members-only" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project4 mt-3">
+            <h5 class="px-4 pt-5 red-text">Private-Events</h5>
+            <small><p class="px-4 yellow-text"> Users can create events and invite other users to participate.</p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Rails</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Ruby</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Bootstrap</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/private-events" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project5 position-relative mt-3">
+            <h5 class="px-4 pt-5 red-text">Social-Media-App</h5>
+            <small><p class="px-4 yellow-text">Users can create post, trend other users and then like and/or comment their posts.</p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Rails</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Ruby</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Bootstrap</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/ror-social-scaffold" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="project6 mt-3">
+            <h5 class="px-4 pt-5 red-text">Philosophy</h5>
+            <small><p class="px-4 yellow-text">Users can create articles on philosophy, as well as read and then vote and/or comment other user's philosophical articles.</p></small>
+            <div class="d-flex flex-row justify-content-center mx-1 mt-5">
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Rails</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Ruby</p>
+              <p class="border rounded bg-secondary white-text mx-1 px-2 py-2">Bootstrap</p>
+            </div>
+          </div>
+          <a href="https://github.com/German-Cobian/Philosophy" class="col-12 btn py-2 px-5 orange">See Project</a>
+        </div>
+
+      </div>
+
+    </section>
+    
+    <section id="About" class="black">
+
+      <div class="backgrnd1 mt-5 py-5 border-bottom border-white">
+        <h2 class="orange-text pl-5">About Me</h2>
+        <p class="col-10 col-md-6 white-text pl-5">I enjoy collaborating in development teams to achieve the creation, improvement and release of innovative and attention getting projects.</p>
+        <a href="https://docs.google.com/document/d/1wLt5q1wWXoSUyOCQ2hFci2galwlzUkIkrxx9HvMSKt8/edit" class="col-3 btn ml-5 py-2 orange">My Resume</a>
+      </div>
+
+      <div class="d-flex flex-column mx-5 flex-md-row justify-content-around py-5">
+
+        <div class="pb-5">
+
+          <div class="d-flex flex-row">
+            <svg class="mt-1 mr-2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="12.7279" width="18" height="18" transform="rotate(-45 0 12.7279)" fill="#F55800"/></svg>
+            <h3 class="white-text mb-5">Languages</h3>
+          </div>
+          <ul>
+            <li class="white-text mb-3">Html</li>
+            <li class="white-text mb-3">Css</li>
+            <li class="white-text mb-3">Ruby</li>
+            <li class="white-text mb-3">Javascript</li>
+          </ul>
+
+        </div>
+      
+        <div class="pb-5">
+
+          <div class="d-flex flex-row">
+            <svg class="mt-2 mr-2" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.456055" width="18" height="18" fill="#F55800"/></svg>
+            <h3 class="white-text mb-5">Frameworks</h3>
+          </div>
+          <ul>
+            <li class="white-text mb-3">Bootstrap</li>
+            <li class="white-text mb-3">Rails</li>
+            <li class="white-text mb-3">React</li>
+            <li class="white-text mb-3">Redux</li>             
+          </ul>
+        </div>
+
+        <div class="pb-5">
+
+          <div class="d-flex flex-row">
+            <svg class="mt-2 mr-2" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.456055" width="18" height="18" rx="9" fill="#F55800"/></svg>
+            <h3 class="white-text mb-5">Skills</h3>
+          </div>
+          <ul>
+            <li class="white-text mb-3">Terminal</li>
+            <li class="white-text mb-3">Github</li>
+            <li class="white-text mb-3">Heroku</li>   
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+     
+    <section id="Contact" class="d-flex flex-column flex-md-row my-5">
+      
+      <div class="d-flex flex-column flex-md-row mx-5 my-5">
+        
+        <div>
+          <h4 class="col-10 mb-5">Looking for a full-stack web-developer for your team? Contact me and we can schedule a zoom chat.</h4>
+        </div>
+
+
+      <div class="col-sm-10 col-md-6 border px-5 py-5">
+        <form  name=”contact_form” id="contact-form" action="https://formspree.io/f/xeqvkewr" method="POST">
+          <div class="d-flex flex-column justify-content-center">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" class="form-control mb-4" placeholder="Enter your name">
+              <label for="email">E-mail address:</label>
+              <input type="text" name="email" id="email" class="form-control mb-4" placeholder="Enter your e-mail address">
+              <label for="message">Message:</label>
+              <textarea name="message" id="message" class="form-control mb-5" placeholder="Enter your message here" required maxlength="250"></textarea>
+              <input type="submit" class="col-4 btn orange " value="Contact >">
+          </div>
+        </form>
+      </div>
+
+      </div>
+      
+    </section>
+
+    <div class="d-flex flex-row justify-content-around py-3 border-top">
+      <a href="https://www.linkedin.com/in/german-cobian/"><img alt="" class="" src="assets/linkedin.png" height= 30 width= 30></i></a>
+      <a href="https://github.com/German-Cobian"><img alt="" class="" src="assets/github.png" height= 30 width= 30></i></a>
+      <a href="https://twitter.com/GermanCobian3"><img alt="" class="" src="assets/twitter.png" height= 30 width= 30></i></a>
+    </div>
+
+  </body>
+</html>
+
+<script language=”JavaScript”>
+
+  var frmvalidator = new Validator(“contactform”);
+  frmvalidator.addValidation(“name”,”req”,”Please provide your name”);
+  frmvalidator.addValidation(“email”,”req”,”Please provide your email”);
+  frmvalidator.addValidation(“email”,”email”, “Please enter a valid email address”);
+
+</script>
