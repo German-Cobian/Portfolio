@@ -83,7 +83,7 @@ body {
 .project3 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/members-only.png");
+    url("assets/book-list.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -91,7 +91,7 @@ body {
 .project4 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/private-events.png");
+    url("assets/activities-list.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
