@@ -98,16 +98,16 @@ body {
 
 .project5 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/social-media.png");
+  background-image: linear-gradient(rgb(228 224 225 / 50%), rgb(8 8 8 / 93%)),
+    url("assets/philosophy.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .project6 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 50%), rgb(8 8 8 / 93%)),
-    url("assets/philosophy.png");
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+    url("assets/modern-art-gallery.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
