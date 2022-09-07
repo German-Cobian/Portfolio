@@ -75,7 +75,7 @@ body {
 .project2 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/web-development.png");
+    url("assets/book-list.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -83,20 +83,12 @@ body {
 .project3 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/book-list.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.project4 {
-  height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
     url("assets/activities-list.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.project5 {
+.project4 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 50%), rgb(8 8 8 / 93%)),
     url("assets/philosophy.png");
@@ -104,10 +96,18 @@ body {
   background-repeat: no-repeat;
 }
 
-.project6 {
+.project5 {
   height: 300px;
   background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
     url("assets/modern-art-gallery.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project6 {
+  height: 300px;
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+    url("assets/yachts-display.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
