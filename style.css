@@ -6,18 +6,6 @@ body {
   color: #d36d19;
 }
 
-.white-text {
-  color: white;
-}
-
-.red-text {
-  color: red;
-}
-
-.yellow-text {
-  color: yellow;
-}
-
 .blue-text {
   color: blue;
 }
@@ -28,6 +16,10 @@ body {
 
 .orange {
   background-color: #d36d19;
+}
+
+.orange-border {
+  border: 3px solid orange;
 }
 
 .dropdown {
@@ -64,50 +56,66 @@ body {
   background-repeat: no-repeat;
 }
 
+.project-info {
+  height: 200px;
+}
+
 .project1 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
     url("assets/tic-tac-toe.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 
 .project2 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
     url("assets/book-list.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 
 .project3 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
-    url("assets/activities-list.png");
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
+    url("assets/tv-shows-listing.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 
 .project4 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 50%), rgb(8 8 8 / 93%)),
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
     url("assets/philosophy.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 
 .project5 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
     url("assets/modern-art-gallery.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
 
 .project6 {
   height: 300px;
-  background-image: linear-gradient(rgb(228 224 225 / 30%), rgb(8 8 8 / 93%)),
+  background-image: linear-gradient(rgb(228 224 225 / 30%), rgba(73, 72, 72, 0.93)),
     url("assets/yachts-display.png");
   background-size: contain;
   background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 5%;
 }
